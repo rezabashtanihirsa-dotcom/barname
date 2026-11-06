@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1012" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="برنامه">
+  <title>برنامه تمرین و تغذیه</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-accent="upper">
+
+  <header class="top">
+    <div class="top-row">
+      <div>
+        <h1>برنامه تمرین و تغذیه</h1>
+        <p class="muted small" id="today-label"></p>
+      </div>
+      <button class="btn ghost no-print" type="button" data-action="print">چاپ / PDF</button>
+    </div>
+    <section class="card phase" id="phase"></section>
+  </header>
+
+  <nav class="tabs no-print" id="tabs" role="tablist" aria-label="روزها"></nav>
+
+  <main id="panels"></main>
+
+  <div class="timer no-print" id="timer" hidden role="timer" aria-live="polite">
+    <div class="timer-bar"><span id="timer-fill"></span></div>
+    <div class="timer-row">
+      <div class="timer-info">
+        <span class="timer-name" id="timer-name"></span>
+        <strong class="timer-time" id="timer-time">۰:۰۰</strong>
+      </div>
+      <button class="btn ghost" type="button" data-action="timer-add">+۱۵ ثانیه</button>
+      <button class="btn" type="button" data-action="timer-stop">بستن</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
